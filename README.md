@@ -70,8 +70,8 @@ On doit pouvoir arriver sur l'appli à n'importe quelle URL, donc __la page sing
 
 La liste des features à implémenter, dans l'ordre. __Penser à faire un commit par feature__, de facon a pouvoir tout casser sans que ca soit le drame !  Il y a une idée de design de l'appli dans le fichier `mockup.png`, mais la aussi vous êtes totalement libres.
 
-- Loading: Etat de chargement lors d'un appel à l'api
-- Error: Afficher une boite d'alerte lorsque l'api renvoie une erreur (Dans un premier temps gérer tous les types d'erreur indifféremment de façon  a ce que l'appli ne crash pas.)
+- [OK] Loading: Etat de chargement lors d'un appel à l'api
+- [OK] Error: Afficher une boite d'alerte lorsque l'api renvoie une erreur (Dans un premier temps gérer tous les types d'erreur indifféremment de façon  a ce que l'appli ne crash pas.)
 - Routing : depuis la liste vers page single
 - Routing : Single vers homepage
 - Error: Différencier les types d'erreurs pour afficher des erreurs plus utiles à l'utilisateur. (dates fournies invalides, erreur interne au serveur, ...)
