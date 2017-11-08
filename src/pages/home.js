@@ -1,52 +1,56 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import List from './../components/list';
-import { ProgressBar } from 'react-materialize';
-import { Link} from 'react-router-dom'
+import {ProgressBar} from 'react-materialize';
+import axios from 'axios';
+import {Link} from 'react-router-dom'
+
 class HomePage extends Component {
 
-  constructor(props) {
-    super(props);
+    constructor(props) {
+        super(props);
 
-    this.state = {
-      data: null,
+        this.state = {
+            data: null,
+        }
     }
-  }
 
-  componentDidMount() {
+    componentDidMount() {
 
-    // Get data from API
-    fetch('http://localhost:1337')
-      // parse response
-      .then((res) => res.json())
-      // use parsed response
-      .then((json) => {
-        this.setState({
-          data: json,
-        });
-      });
-  }
+        // Get data from API with Axios
+        let self = this;
+        axios.get('http://localhost:1337')
+            .then(function (response) {
+                console.log(response.data);
+                self.setState({
+                    data: response.data,
+                });
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
 
-  render() {
+    }
 
-    const { data } = this.state;
+    render() {
 
-    return (
-      <div>
+        const {data} = this.state;
 
-        <h2> HomePage </h2>
+        return (
+            <div>
+
+                <h2> HomePage </h2>
 
 
-
-        {!data ? (
-          <ProgressBar />
-        ) : (
-          <div>
-            <List data={data} />
-          </div>
-        )}
-      </div>
-    );
-  }
+                {!data ? (
+                    <ProgressBar/>
+                ) : (
+                    <div>
+                        <List data={data}/>
+                    </div>
+                )}
+            </div>
+        );
+    }
 
 }
 
