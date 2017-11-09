@@ -70,15 +70,15 @@ On doit pouvoir arriver sur l'appli à n'importe quelle URL, donc __la page sing
 
 La liste des features à implémenter, dans l'ordre. __Penser à faire un commit par feature__, de facon a pouvoir tout casser sans que ca soit le drame !  Il y a une idée de design de l'appli dans le fichier `mockup.png`, mais la aussi vous êtes totalement libres.
 
-- [OK] Loading: Etat de chargement lors d'un appel à l'api
-- [OK] Error: Afficher une boite d'alerte lorsque l'api renvoie une erreur (Dans un premier temps gérer tous les types d'erreur indifféremment de façon  a ce que l'appli ne crash pas.)
-- [OK] Routing : depuis la liste vers page single
-- [OK] Routing : Single vers homepage
-- [OK] Error: Différencier les types d'erreurs pour afficher des erreurs plus utiles à l'utilisateur. (dates fournies invalides, erreur interne au serveur, ...)
-- Search : pouvoir envoyer un paramètre `from` et / ou `to` pour filtrer la liste (pour l'exercice, on refait un appel a l'API, on ne filtre pas la liste en mémoire). __C'est la partie la plus difficile et la plus importante !__. A vous de voir quel composant doit faire les appels à l'API, qui gère les états de chargement, les erreurs, etc...
+- **[OK]** Loading: Etat de chargement lors d'un appel à l'api
+- **[OK]** Error: Afficher une boite d'alerte lorsque l'api renvoie une erreur (Dans un premier temps gérer tous les types d'erreur indifféremment de façon  a ce que l'appli ne crash pas.)
+- **[OK]** Routing : depuis la liste vers page single
+- **[OK]** Routing : Single vers homepage
+- **[OK]** Error: Différencier les types d'erreurs pour afficher des erreurs plus utiles à l'utilisateur. (dates fournies invalides, erreur interne au serveur, ...)
+- **[OK]** Search : pouvoir envoyer un paramètre `from` et / ou `to` pour filtrer la liste (pour l'exercice, on refait un appel a l'API, on ne filtre pas la liste en mémoire). __C'est la partie la plus difficile et la plus importante !__. A vous de voir quel composant doit faire les appels à l'API, qui gère les états de chargement, les erreurs, etc...
 - Gérer le cas ou l'api ne renvoie pas de données. (Ce n'est pas une erreur, mais rien ne correspond aux dates fournies)
 - [ENC] Routing : Prev / next sur la single
-- [ENC] Error: Afficher une page 404 si une ID est invalide
+- **[OK]** Error: Afficher une page 404 si une ID est invalide
 - Search : gérer le cas ou on envoie des dates invalides, par exemple si `from` est postérieur à `to`. Il est possible que vous deviez casser ce que vous avez déjà fait jusque la. __Pensez à commit avant de vous lancer, ou changez de branche :)__
 - Refactoring: Extraire les appels HTTP des composants dans un ficher/une classe à part
 - ...
