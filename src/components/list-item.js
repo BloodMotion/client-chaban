@@ -10,16 +10,13 @@ class ListItem extends Component {
     item: PropTypes.shape({
       date: PropTypes.string.isRequired,
     }).isRequired,
-  }
+  };
 
   render() {
     const { item } = this.props;
 
     return (
       <Card title={item.date} >
-
-
-
 
         <Link
           to={`/${item.id}`}

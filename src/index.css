@@ -5,5 +5,19 @@ body {
 }
 
 .center {
+    margin: 0 auto;
     text-align: center;
+    display: block;
+}
+
+.back {
+    font-size: 1.4em;
+}
+
+.back:hover {
+    text-decoration: underline;
+}
+
+.back > i {
+    vertical-align: middle;
 }

@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import List from './../components/list';
 import {ProgressBar} from 'react-materialize';
 import axios from 'axios';
-import {Link} from 'react-router-dom'
 
 class HomePage extends Component {
 
@@ -39,7 +38,7 @@ class HomePage extends Component {
 
         let res = !data ? (
             err ? (<div>
-                    <div className="center"><a className="btn btn-floating btn-large pulse"><i className="material-icons">cloud</i></a>
+                    <div className="center"><a className="btn btn-floating btn-large"><i className="material-icons">cloud</i></a>
                         <pre className="warn">{err.message}</pre>
                     </div>
                 </div>)
@@ -48,15 +47,11 @@ class HomePage extends Component {
 
         return (
             <div>
-
-                <h2 className="center"> HomePage </h2>
-
+                <h2 className="center">HomePage</h2>
                 {res}
-
             </div>
         );
     }
-
 }
 
 export default HomePage;
