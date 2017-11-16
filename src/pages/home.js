@@ -13,7 +13,6 @@ class HomePage extends Component {
         this.state = {
             data: null,
             err: null,
-            tg: null,
         }
     }
 
@@ -24,6 +23,10 @@ class HomePage extends Component {
     API = function(date) {
         let urlEndPoint = 'http://localhost:1337';
         if(date) {urlEndPoint = 'http://localhost:1337/?from=' + date}
+
+        this.setState({
+            data: null,
+        });
 
         // Get data from API with Axios
         axios.get(urlEndPoint)
@@ -40,17 +43,28 @@ class HomePage extends Component {
     };
 
     dateChange = (elem) => {
+        console.log('1', this.state.data);
+
         let date = moment(elem.target.value).format('DD-MM-YYYY');
+
+        console.log('2', this.state.data);
+
 
         // Api call
         this.API(date);
     };
 
     render() {
+        console.log('3', this.state.data);
+
+
         const {
             data,
             err,
         } = this.state;
+
+        console.log('4', data);
+
 
         let res = !data ? (
             err ? (<div>
